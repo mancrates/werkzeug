@@ -109,6 +109,7 @@ from .converters import AnyConverter as AnyConverter
 from .converters import BaseConverter as BaseConverter
 from .converters import FloatConverter as FloatConverter
 from .converters import IntegerConverter as IntegerConverter
+from .converters import NumberConverter as NumberConverter
 from .converters import PathConverter as PathConverter
 from .converters import UnicodeConverter as UnicodeConverter
 from .converters import UUIDConverter as UUIDConverter
