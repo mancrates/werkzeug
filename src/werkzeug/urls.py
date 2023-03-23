@@ -504,12 +504,12 @@ def url_parse(
     .. deprecated:: 2.3
         Will be removed in Werkzeug 2.4. Use ``urllib.parse.urlsplit`` instead.
     """
-    warnings.warn(
-        "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 2.4."
-        " Use 'urllib.parse.urlsplit' instead.",
-        DeprecationWarning,
-        stacklevel=2,
-    )
+    # warnings.warn(
+    #     "'werkzeug.urls.url_parse' is deprecated and will be removed in Werkzeug 2.4."
+    #     " Use 'urllib.parse.urlsplit' instead.",
+    #     DeprecationWarning,
+    #     stacklevel=2,
+    # )
     s = _make_encode_wrapper(url)
     is_text_based = isinstance(url, str)
 
@@ -608,12 +608,12 @@ def url_quote(
     .. versionadded:: 0.9.2
        The `unsafe` parameter was added.
     """
-    warnings.warn(
-        "'werkzeug.urls.url_quote' is deprecated and will be removed in Werkzeug 2.4."
-        " Use 'urllib.parse.quote' instead.",
-        DeprecationWarning,
-        stacklevel=2,
-    )
+    # warnings.warn(
+    #     "'werkzeug.urls.url_quote' is deprecated and will be removed in Werkzeug 2.4."
+    #     " Use 'urllib.parse.quote' instead.",
+    #     DeprecationWarning,
+    #     stacklevel=2,
+    # )
 
     if not isinstance(string, (str, bytes, bytearray)):
         string = str(string)
@@ -668,12 +668,12 @@ def url_unparse(components: t.Tuple[str, str, str, str, str]) -> str:
     .. deprecated:: 2.3
         Will be removed in Werkzeug 2.4. Use ``urllib.parse.urlunsplit`` instead.
     """
-    warnings.warn(
-        "'werkzeug.urls.url_unparse' is deprecated and will be removed in Werkzeug 2.4."
-        " Use 'urllib.parse.urlunsplit' instead.",
-        DeprecationWarning,
-        stacklevel=2,
-    )
+    # warnings.warn(
+    #     "'werkzeug.urls.url_unparse' is deprecated and will be removed in Werkzeug 2.4."
+    #     " Use 'urllib.parse.urlunsplit' instead.",
+    #     DeprecationWarning,
+    #     stacklevel=2,
+    # )
     _check_str_tuple(components)
     scheme, netloc, path, query, fragment = components
     s = _make_encode_wrapper(scheme)
@@ -716,12 +716,12 @@ def url_unquote(
     .. deprecated:: 2.3
         Will be removed in Werkzeug 2.4. Use ``urllib.parse.unquote`` instead.
     """
-    warnings.warn(
-        "'werkzeug.urls.url_unquote' is deprecated and will be removed in Werkzeug 2.4."
-        " Use 'urllib.parse.unquote' instead.",
-        DeprecationWarning,
-        stacklevel=2,
-    )
+    # warnings.warn(
+    #     "'werkzeug.urls.url_unquote' is deprecated and will be removed in Werkzeug 2.4."
+    #     " Use 'urllib.parse.unquote' instead.",
+    #     DeprecationWarning,
+    #     stacklevel=2,
+    # )
     rv = _unquote_to_bytes(s, unsafe)
     if charset is None:
         return rv
@@ -1061,12 +1061,12 @@ def url_decode(
     .. versionchanged:: 0.5
         The ``cls`` parameter was added.
     """
-    warnings.warn(
-        "'werkzeug.urls.url_decode' is deprecated and will be removed in Werkzeug 2.4."
-        " Use 'urllib.parse.parse_qs' instead.",
-        DeprecationWarning,
-        stacklevel=2,
-    )
+    # warnings.warn(
+    #     "'werkzeug.urls.url_decode' is deprecated and will be removed in Werkzeug 2.4."
+    #     " Use 'urllib.parse.parse_qs' instead.",
+    #     DeprecationWarning,
+    #     stacklevel=2,
+    # )
 
     if cls is None:
         from .datastructures import MultiDict  # noqa: F811
@@ -1188,12 +1188,12 @@ def url_encode(
     .. versionchanged:: 0.5
         Added the ``sort``, ``key``, and ``separator`` parameters.
     """
-    warnings.warn(
-        "'werkzeug.urls.url_encode' is deprecated and will be removed in Werkzeug 2.4."
-        " Use 'urllib.parse.urlencode' instead.",
-        DeprecationWarning,
-        stacklevel=2,
-    )
+    # warnings.warn(
+    #     "'werkzeug.urls.url_encode' is deprecated and will be removed in Werkzeug 2.4."
+    #     " Use 'urllib.parse.urlencode' instead.",
+    #     DeprecationWarning,
+    #     stacklevel=2,
+    # )
     separator = _to_str(separator, "ascii")
     return separator.join(_url_encode_impl(obj, charset, sort, key))
 
@@ -1260,12 +1260,12 @@ def url_join(
     .. deprecated:: 2.3
         Will be removed in Werkzeug 2.4. Use ``urllib.parse.urljoin`` instead.
     """
-    warnings.warn(
-        "'werkzeug.urls.url_join' is deprecated and will be removed in Werkzeug 2.4."
-        " Use 'urllib.parse.urljoin' instead.",
-        DeprecationWarning,
-        stacklevel=2,
-    )
+    # warnings.warn(
+    #     "'werkzeug.urls.url_join' is deprecated and will be removed in Werkzeug 2.4."
+    #     " Use 'urllib.parse.urljoin' instead.",
+    #     DeprecationWarning,
+    #     stacklevel=2,
+    # )
 
     if isinstance(base, tuple):
         base = url_unparse(base)
